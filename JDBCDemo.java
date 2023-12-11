@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 public class JDBCDemo {
     static Scanner sc=new Scanner(System.in);
+    static String url = "jdbc:mysql://localhost:3306/db_name";
+    static String userName = "your_username";
+    static String passWord = "your_password";
     public static void main(String[] args) throws Exception {
         System.out.println(".....Welcome to Telephone directory.....");
         boolean ch=true;
@@ -52,11 +55,6 @@ public class JDBCDemo {
     }
 
     public static void searchRecord() throws Exception{
-        String url = "jdbc:mysql://localhost:3306/db_name";
-        String userName = "your_username";
-        String passWord = "your_password";
-
-
         System.out.println("1.Search with Name: ");
         System.out.println("2.Search with city: ");
         System.out.println("3.Search with number: ");
@@ -150,9 +148,6 @@ public class JDBCDemo {
 
     //Reading from the database
     public static void readRecords() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/db_name";
-        String userName = "your_username";
-        String passWord = "your_password";
         String query = "select * from details";
 //All this information of your mysql workbench
 
@@ -173,10 +168,7 @@ public class JDBCDemo {
 
     //insert with variables
     public static void insertNew() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/db_name";
-        String userName = "your_username";
-        String passWord = "your_password";
-
+    
         System.out.println("Enter the Name: ");
         String Name=sc.next();
         System.out.println("Enter the Number: ");
@@ -202,16 +194,11 @@ public class JDBCDemo {
 
     //delete
     public static void deleteRecord() throws Exception {
-         String url = "jdbc:mysql://localhost:3306/db_name";
-        String userName = "your_username";
-        String passWord = "your_password";
-
         System.out.println("Enter the number: ");
         String Number=sc.next();
 
         String query = "delete from details where Ph_num = " + "'"+Number+"'";
-
-
+        
         Connection con = DriverManager.getConnection(url, userName, passWord);
         Statement st = con.createStatement();
         int rows = st.executeUpdate(query);
@@ -222,11 +209,6 @@ public class JDBCDemo {
 
     //update
     public static void updateRecord() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/db_name";
-        String userName = "your_username";
-        String passWord = "your_password";
-
-
         System.out.println("Enter the name : ");
         String Name=sc.next();
         System.out.println("Enter the number: ");
