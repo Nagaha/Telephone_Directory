@@ -52,9 +52,9 @@ public class JDBCDemo {
     }
 
     public static void searchRecord() throws Exception{
-        String url = "jdbc:mysql://localhost:3306/phoneBook";
-        String userName = "root";
-        String passWord = "#naga2020";
+        String url = "jdbc:mysql://localhost:3306/db_name";
+        String userName = "your_username";
+        String passWord = "your_password";
 
 
         System.out.println("1.Search with Name: ");
@@ -150,11 +150,11 @@ public class JDBCDemo {
 
     //Reading from the database
     public static void readRecords() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/phoneBook";
-        String userName = "root";
-        String passWord = "#naga2020";
+        String url = "jdbc:mysql://localhost:3306/db_name";
+        String userName = "your_username";
+        String passWord = "your_password";
         String query = "select * from details";
-
+//All this information of your mysql workbench
 
         Connection con = DriverManager.getConnection(url, userName, passWord);
         Statement st = con.createStatement();
@@ -173,9 +173,9 @@ public class JDBCDemo {
 
     //insert with variables
     public static void insertNew() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/phoneBook";
-        String userName = "root";
-        String passWord = "#naga2020";
+        String url = "jdbc:mysql://localhost:3306/db_name";
+        String userName = "your_username";
+        String passWord = "your_password";
 
         System.out.println("Enter the Name: ");
         String Name=sc.next();
@@ -202,9 +202,9 @@ public class JDBCDemo {
 
     //delete
     public static void deleteRecord() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/phoneBook";
-        String userName = "root";
-        String passWord = "#naga2020";
+         String url = "jdbc:mysql://localhost:3306/db_name";
+        String userName = "your_username";
+        String passWord = "your_password";
 
         System.out.println("Enter the number: ");
         String Number=sc.next();
@@ -222,9 +222,9 @@ public class JDBCDemo {
 
     //update
     public static void updateRecord() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/phoneBook";
-        String userName = "root";
-        String passWord = "#naga2020";
+        String url = "jdbc:mysql://localhost:3306/db_name";
+        String userName = "your_username";
+        String passWord = "your_password";
 
 
         System.out.println("Enter the name : ");
